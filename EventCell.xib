@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Bold.ttf">
+            <string>SFUIText-Bold</string>
+        </array>
+        <array key="SFUIText-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCell" id="gTV-IL-0wX" customClass="EventCell" customModule="Reminder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="466" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5k-gx-Dm4">
+                        <rect key="frame" x="8" y="16" width="450" height="132"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rfb-ry-6sK" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                <rect key="frame" x="16" y="16" width="418" height="31.5"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Bold" family="SF UI Text" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="It8-kF-whZ">
+                                <rect key="frame" x="16" y="57.5" width="418" height="20"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Rfb-ry-6sK" secondAttribute="trailing" constant="16" id="8Ap-oH-nzE"/>
+                            <constraint firstItem="It8-kF-whZ" firstAttribute="leading" secondItem="r5k-gx-Dm4" secondAttribute="leading" constant="16" id="Gd4-vu-sML"/>
+                            <constraint firstItem="Rfb-ry-6sK" firstAttribute="leading" secondItem="r5k-gx-Dm4" secondAttribute="leading" constant="16" id="LGV-fl-CaQ"/>
+                            <constraint firstAttribute="trailing" secondItem="It8-kF-whZ" secondAttribute="trailing" constant="16" id="RDT-hh-6mH"/>
+                            <constraint firstItem="It8-kF-whZ" firstAttribute="top" secondItem="Rfb-ry-6sK" secondAttribute="bottom" constant="10" id="qnD-uG-m5B"/>
+                            <constraint firstItem="Rfb-ry-6sK" firstAttribute="top" secondItem="r5k-gx-Dm4" secondAttribute="top" constant="16" id="uzf-yo-Z5a"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLD-Md-2D2">
+                        <rect key="frame" x="32" y="116" width="402" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="rqG-vU-bYw">
+                                <rect key="frame" x="25" y="18.5" width="66.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZTc-mB-rHw">
+                                <rect key="frame" x="310.5" y="18.5" width="66.5" height="31.5"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rqG-vU-bYw" firstAttribute="leading" secondItem="PLD-Md-2D2" secondAttribute="leading" constant="25" id="Cni-ef-h9y"/>
+                            <constraint firstItem="rqG-vU-bYw" firstAttribute="centerY" secondItem="PLD-Md-2D2" secondAttribute="centerY" id="NRQ-zZ-jfM"/>
+                            <constraint firstItem="ZTc-mB-rHw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rqG-vU-bYw" secondAttribute="trailing" constant="16" id="UxG-Xc-d0X"/>
+                            <constraint firstItem="ZTc-mB-rHw" firstAttribute="centerY" secondItem="PLD-Md-2D2" secondAttribute="centerY" id="kfd-1N-fWJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZTc-mB-rHw" secondAttribute="trailing" constant="25" id="yf5-xq-E2y"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="r5k-gx-Dm4" secondAttribute="bottom" constant="52" id="0ff-Aj-sdr"/>
+                <constraint firstItem="r5k-gx-Dm4" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="8" id="6QC-i0-DPt"/>
+                <constraint firstAttribute="trailing" secondItem="PLD-Md-2D2" secondAttribute="trailing" constant="32" id="EHA-4E-BiF"/>
+                <constraint firstItem="PLD-Md-2D2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="32" id="ZC4-1v-1WI"/>
+                <constraint firstItem="r5k-gx-Dm4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="fR6-p2-Moe"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="r5k-gx-Dm4" secondAttribute="trailing" constant="8" id="hgc-Iz-FTe"/>
+                <constraint firstItem="PLD-Md-2D2" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" constant="-16" id="lMA-8Y-G9I"/>
+                <constraint firstItem="PLD-Md-2D2" firstAttribute="top" secondItem="r5k-gx-Dm4" secondAttribute="bottom" constant="-32" id="o7y-Oa-AiT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="466" height="210"/>
+            <connections>
+                <outlet property="dateLabel" destination="It8-kF-whZ" id="vO7-jx-2dB"/>
+                <outlet property="dateLeftLabel" destination="rqG-vU-bYw" id="S77-eE-jEr"/>
+                <outlet property="dateLeftView" destination="PLD-Md-2D2" id="lJm-w6-YKU"/>
+                <outlet property="eventNameLabel" destination="Rfb-ry-6sK" id="Cok-W1-Pt2"/>
+                <outlet property="eventView" destination="r5k-gx-Dm4" id="p41-vW-FMZ"/>
+                <outlet property="timeLeftLabel" destination="ZTc-mB-rHw" id="jyj-Fy-aAv"/>
+            </connections>
+            <point key="canvasLocation" x="127.53623188405798" y="191.51785714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

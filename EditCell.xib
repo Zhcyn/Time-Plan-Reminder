@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Bold.ttf">
+            <string>SFUIText-Bold</string>
+        </array>
+        <array key="SFUIText-Regular.ttf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EditCell" id="gTV-IL-0wX" customClass="EditCell" customModule="Reminder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="451" height="99"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="451" height="99"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-02-jbD">
+                        <rect key="frame" x="0.0" y="0.0" width="451" height="99"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hx8-Gv-crK" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                <rect key="frame" x="16" y="16" width="321" height="31.5"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Bold" family="SF UI Text" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="N59-vs-OkM">
+                                <rect key="frame" x="16" y="57.5" width="321" height="20"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfC-rg-nEY">
+                                <rect key="frame" x="410" y="0.0" width="25" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="0eM-JI-aKt"/>
+                                    <constraint firstAttribute="width" constant="25" id="OQ2-ng-66z"/>
+                                </constraints>
+                                <state key="normal" image="ic_delete"/>
+                                <connections>
+                                    <action selector="handleDeleteButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Wi2-jI-l3y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHV-HG-lfX">
+                                <rect key="frame" x="353" y="0.0" width="25" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="paG-hK-PEc"/>
+                                    <constraint firstAttribute="height" constant="64" id="peW-lC-jMf"/>
+                                </constraints>
+                                <state key="normal" image="ic_edit_white"/>
+                                <connections>
+                                    <action selector="handleEditButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="KOf-Uf-1oT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CfC-rg-nEY" secondAttribute="trailing" constant="16" id="6hb-Jv-vaJ"/>
+                            <constraint firstItem="YHV-HG-lfX" firstAttribute="leading" secondItem="hx8-Gv-crK" secondAttribute="trailing" constant="16" id="9vs-jP-7Ym"/>
+                            <constraint firstItem="CfC-rg-nEY" firstAttribute="leading" secondItem="YHV-HG-lfX" secondAttribute="trailing" constant="32" id="Dzy-dY-awW"/>
+                            <constraint firstItem="YHV-HG-lfX" firstAttribute="leading" secondItem="N59-vs-OkM" secondAttribute="trailing" constant="16" id="JIt-zG-EzY"/>
+                            <constraint firstItem="N59-vs-OkM" firstAttribute="leading" secondItem="9aq-02-jbD" secondAttribute="leading" constant="16" id="OW8-aa-eBv"/>
+                            <constraint firstItem="CfC-rg-nEY" firstAttribute="top" secondItem="9aq-02-jbD" secondAttribute="top" id="Pjl-yS-akX"/>
+                            <constraint firstItem="hx8-Gv-crK" firstAttribute="top" secondItem="9aq-02-jbD" secondAttribute="top" constant="16" id="feW-qB-rsa"/>
+                            <constraint firstItem="hx8-Gv-crK" firstAttribute="leading" secondItem="9aq-02-jbD" secondAttribute="leading" constant="16" id="wI2-UT-j3x"/>
+                            <constraint firstItem="YHV-HG-lfX" firstAttribute="firstBaseline" secondItem="CfC-rg-nEY" secondAttribute="firstBaseline" id="wjc-or-0I1"/>
+                            <constraint firstItem="N59-vs-OkM" firstAttribute="top" secondItem="hx8-Gv-crK" secondAttribute="bottom" constant="10" id="xKP-Qp-zCA"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="9aq-02-jbD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dys-Qe-W2O"/>
+                <constraint firstAttribute="top" secondItem="9aq-02-jbD" secondAttribute="top" id="EwM-0k-ZYe"/>
+                <constraint firstAttribute="trailing" secondItem="9aq-02-jbD" secondAttribute="trailing" id="PSM-wZ-3l0"/>
+                <constraint firstItem="9aq-02-jbD" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" id="f3l-go-IM6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="451" height="99"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="dateEventLabel" destination="N59-vs-OkM" id="Wvo-ty-3Ni"/>
+                <outlet property="editView" destination="9aq-02-jbD" id="bHh-gd-36F"/>
+                <outlet property="nameEventLabel" destination="hx8-Gv-crK" id="OAs-T4-GgC"/>
+            </connections>
+            <point key="canvasLocation" x="422.46376811594206" y="136.27232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_delete" width="14" height="19"/>
+        <image name="ic_edit_white" width="18" height="19"/>
+    </resources>
+</document>
